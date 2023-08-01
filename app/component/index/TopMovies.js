@@ -1,6 +1,5 @@
 'use client';
 import { useTopMoviesQuery } from "@/app/reduxStore/features/movie/moviesApi";
-import { useEffect } from "react";
 import ImdbLogo from "../icons/ImdbLogo";
 import NextPrev from "../icons/NextPrev";
 
@@ -16,6 +15,9 @@ const TopMovies = () => {
     return <div>Error: {error.message}</div>;
   }
   
+  const getRandomNumber = () => {
+    return Math.floor(Math.random() * 10) + 1;
+  };
 
   return (
     <section className="mt-9 bg-lime-300 dark:bg-rose-500 p-5 rounded-md">
@@ -43,7 +45,7 @@ const TopMovies = () => {
               <span className="capitalize font-medium truncate">{movie.title}</span>
               <div className="flex space-x-2 items-center text-xs">
                 <ImdbLogo />
-                <span>7.4</span>
+                <span>{getRandomNumber()}</span>
               </div>
             </div>
           </div>

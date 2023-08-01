@@ -12,6 +12,9 @@ const CategoryWiseMovies = () => {
     const colors = ['#FF5733', '#33FF57', '#5733FF', '#33FFFF', '#FF33FF', '#FFFF33'];
     return colors[Math.floor(Math.random() * colors.length)];
   };
+  const getRandomNumber = () => {
+    return Math.floor(Math.random() * 10) + 1;
+  };
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -39,7 +42,7 @@ const CategoryWiseMovies = () => {
                   <span className="capitalize  font-medium truncate">{movie.title}</span>
                   <div className="flex space-x-2 items-center text-xs">
                     <ImdbLogo />
-                    <span>7.4</span>
+                    <span>{getRandomNumber()}</span>
                   </div>
                 </div>
               </div>

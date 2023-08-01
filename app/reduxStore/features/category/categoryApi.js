@@ -7,7 +7,19 @@ export const categoryApi = apiSlice.injectEndpoints({
                 `/category-wise-movies`,
                
         }),
+        allCategories: builder.query({
+            query: () =>
+                `/all-category`,
+               
+        }),
+        categoryStore: builder.mutation({
+            query: (data) => ({
+                url: "/category-store",
+                method: "POST",
+                body: data,
+            }),
+        })
     }),
 });
 
-export const { useCategoryWiseMoviesQuery} = categoryApi;
+export const { useCategoryWiseMoviesQuery, useAllCategoriesQuery, useCategoryStoreMutation} = categoryApi;
