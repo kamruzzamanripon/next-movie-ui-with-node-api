@@ -38,6 +38,8 @@ const FormInput = () => {
         name: '',
         image: null,
       });
+
+      router.push("/");
       
     } catch (error) {
       console.error('Error saving the movie:', error);

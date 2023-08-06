@@ -6,9 +6,9 @@ import TopMovies from "./component/index/TopMovies";
 
 export default function Home() {
   return (
-    <div class="flex min-h-screen">
+    <div className="flex min-h-screen">
     <LeftSideBar />
-    <div class=" flex-1 py-10  px-5 sm:px-10 ">
+    <div className=" flex-1 py-10  px-5 sm:px-10 ">
       <HeroSection />
       <TopMovies />
       <CategoryWiseMovies />

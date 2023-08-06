@@ -12,8 +12,23 @@ export const moviesApi = apiSlice.injectEndpoints({
                 method: "POST",
                 body: data,
             }),
-        })
+        }),
+        
+        aiMovieStore: builder.mutation({
+           
+            query: (data) => ({
+                
+                url: "/ai-movie-store",
+                method: "POST",
+                body: data,
+                
+            }),
+            async onQueryStarted(arg, { queryFulfilled, dispatch }) {
+               console.log('redux', arg)
+            },
+        }),
+        
     }),
 });
 
-export const { useTopMoviesQuery, useManualMovieStoreMutation} = moviesApi;
+export const { useTopMoviesQuery, useManualMovieStoreMutation, useAiMovieStoreMutation} = moviesApi;
