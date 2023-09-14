@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import Error from "../component/common/Error";
 import { useLoginMutation } from "../reduxStore/features/auth/authApi";
 
-const page = () => {
+const Page = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -76,4 +76,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

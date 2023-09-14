@@ -38,7 +38,7 @@ const AiFormResult = () => {
       description: aiMovieData?.synopsis,
       image: aiMovieData?.b64JsonImage?.b64_json,
       });
-  },[])
+  },[aiMovieData?.b64JsonImage?.b64_json, aiMovieData?.synopsis, aiMovieData?.title])
 
   const handleSubmit = async (e) => {
     e.preventDefault();

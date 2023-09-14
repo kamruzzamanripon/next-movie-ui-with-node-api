@@ -1,6 +1,7 @@
 'use client';
 import { useAllCategoriesQuery } from "@/app/reduxStore/features/category/categoryApi";
 import { useManualMovieStoreMutation } from "@/app/reduxStore/features/movie/moviesApi";
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
@@ -68,11 +69,12 @@ const FormInput = () => {
         <h1 className="text-2xl font-bold text-gray-700 mb-3 dark:text-white">
           Manual Movie Maker
         </h1>
-        <img
-          src="storytelling-08.gif"
-          alt
-          className="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden"
-        />
+       
+        <Image
+                src="/storytelling-08.gif"
+                alt="input"
+                className="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden"
+            />
       </div>
       <form onSubmit={handleSubmit}>
         <div className="mx-10 px-10 py-16 bg-gray-400 dark:bg-black dark:border rounded-md">
