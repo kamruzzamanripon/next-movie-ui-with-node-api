@@ -1,5 +1,6 @@
 'use client';
 import { useCategoryStoreMutation } from "@/app/reduxStore/features/category/categoryApi";
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
@@ -51,11 +52,15 @@ const FormInput = () => {
         <h1 className="text-2xl font-bold text-gray-700 mb-3 dark:text-white">
           Create Category
         </h1>
-        <img
-          src="AS0007464_07.gif"
-          alt
-          className="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden"
-        />
+       
+        <Image
+              src="/AS0007464_07.gif"
+              alt="form"
+              className="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden"
+              width={105} 
+            height={105} 
+            layout="responsive"
+          />
       </div>
 
       <form onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 'use client';
 import { aiMovieData } from '@/app/reduxStore/features/movie/movieSlice';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Configuration, OpenAIApi } from 'openai';
 import { useState } from "react";
@@ -128,11 +129,15 @@ async function fetchImageUrl(imagePrompt,synopsis,title){
           <p className="dark:text-white">
             Please, write your idea below input box
           </p>
-          <img
-            src="robot-1.webp"
-            alt
-            className="rounded-full w-48 h-48 absolute top-0 right-0 right-[240px]"
-          />
+        
+          <Image
+                src="/robot-1.webp"
+                alt="Bird flying animation" 
+                className="rounded-full w-48 h-48 absolute top-0 right-0"
+                width={105} 
+            height={105} 
+            layout="responsive"
+            />
         </div>
         
         <br /><br /><br /><br />

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import ImdbLogo from "../icons/ImdbLogo";
 
 const RightSideBar = () => {
@@ -32,12 +33,17 @@ const RightSideBar = () => {
         </span>
         <ul className="mt-4 text-gray-400 text-xs space-y-3">
           <li className="flex space-y-3 space-x-3 border p-5 rounded-md border-x-2">
-            <img
-              src="ShawshankRedemptionMoviePoster.jpg"
-              className="w-1/3 rounded-md"
-              alt
-            />
-            <div className="flex flex-col justify-between  ">
+            
+          <Image
+            src="/ShawshankRedemptionMoviePoster.jpg" // Start with a leading slash to indicate the root
+            className="w-1/3 rounded-md"
+            alt="Shawshank Redemption Movie Poster"
+            width={105} 
+            height={105} 
+            layout="responsive"
+          />
+
+           <div className="flex flex-col justify-between  ">
               <div className="flex flex-col space-y-1">
                 <span className="text-gray-700 dark:text-white font-semibold">
                   The Shawshank Redemption
@@ -66,10 +72,14 @@ const RightSideBar = () => {
         </span>
         <ul className="mt-4 text-gray-400 text-xs space-y-3">
           <li className="flex space-x-3 border p-5 rounded-md border-x-2">
-            <img
-              src="The_Matrix_Poster.jpg"
-              className="object-cover w-1/3 rounded-md"
-              alt
+           
+            <Image
+                 src="/The_Matrix_Poster.jpg"
+                 className="object-cover w-1/3 rounded-md"
+                alt="Bird flying animation" 
+                width={105} 
+                height={105} 
+                layout="responsive"
             />
             <div className="flex flex-col justify-between  ">
               <div className="flex flex-col space-y-1">

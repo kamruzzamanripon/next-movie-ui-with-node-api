@@ -1,6 +1,7 @@
 'use client';
 import { useAllCategoriesQuery } from "@/app/reduxStore/features/category/categoryApi";
 import { useAiMovieStoreMutation } from "@/app/reduxStore/features/movie/moviesApi";
+import Image from 'next/image';
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
@@ -83,13 +84,17 @@ const AiFormResult = () => {
       <form onSubmit={handleSubmit}>
       <div className="mx-10 px-10 py-16 bg-gray-400 dark:bg-black dark:border">
       <div class="mb-6 flex items-center justify-center">
-          <img
-            src={getImageSource()}
-            alt="result-image"
-            className="rounded-md border border-2 border-x-1 w-[350px]"
-            name="image"
-            onChange={handleChange}
-          />
+          
+          <Image
+                src={getImageSource()}
+                alt="result-image"
+                className="rounded-md border border-2 border-x-1 w-[350px]"
+                name="image"
+                onChange={handleChange}
+                width={105} 
+                height={105} 
+                layout="responsive"
+            />
         </div>
 
         
