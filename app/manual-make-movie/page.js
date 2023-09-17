@@ -2,7 +2,7 @@ import LeftSideBar from "../component/common/LeftSideBar";
 import RightSideBar from "../component/common/RightSideBar";
 import FormInput from "../component/manual-make-movie/FormInput";
 
-const page = () => {
+const Page = () => {
   return (
     <div className="flex min-h-screen">
       <LeftSideBar />
@@ -14,4 +14,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

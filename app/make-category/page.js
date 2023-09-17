@@ -3,7 +3,7 @@ import RightSideBar from "../component/common/RightSideBar";
 import AiFormInput from "../component/make-category/FormInput";
 import ProtectedRoute from "../hooks/ProtectedRoute";
 
-const page = () => {
+const Page = () => {
   return (
     <ProtectedRoute>
     <div className="flex min-h-screen">
@@ -17,4 +17,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
