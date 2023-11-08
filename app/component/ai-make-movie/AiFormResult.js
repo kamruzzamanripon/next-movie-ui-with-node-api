@@ -83,7 +83,7 @@ const AiFormResult = () => {
       </div>
       <form onSubmit={handleSubmit}>
       <div className="mx-10 px-10 py-16 bg-gray-400 dark:bg-black dark:border">
-      <div class="mb-6 flex items-center justify-center">
+      <div className="mb-6 flex items-center justify-center">
           
           <Image
                 src={getImageSource()}

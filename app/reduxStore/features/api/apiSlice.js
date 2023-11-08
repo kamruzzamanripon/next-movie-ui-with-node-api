@@ -1,27 +1,25 @@
 'use client';
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-// const authData = JSON.parse(localStorage.getItem("auth"));
-// const localStorageToken = authData?.accessToken;
 
-// Wrap the localStorage access in a client-side check
-let localStorageToken = "";
-if (typeof window !== 'undefined') {
+// Function to get the auth token from localStorage
+function getAuthToken() {
+  if (typeof window !== 'undefined') {
     const authData = JSON.parse(localStorage.getItem("auth"));
-    localStorageToken = authData?.accessToken;
+    return authData?.accessToken;
+  }
+  return undefined;
 }
 
 export const apiSlice = createApi({
     reducerPath: "api",
     baseQuery: fetchBaseQuery({
         baseUrl: process.env.API_ROOT_URL,
-        prepareHeaders: async (headers, { getState, endpoint }) => {
-            const token = getState()?.auth?.accessToken;
+        prepareHeaders: (headers, { getState }) => {
+            // Use the token from the state if available, otherwise try to get it from localStorage
+            const token = getState()?.auth?.accessToken || getAuthToken();
+
             if (token) {
-                headers.set("Authorization", `${token}`);
-            } else if (localStorageToken) {
-                headers.set("Authorization", `${localStorageToken}`);
-            } else {
-                headers.set("Authorization", ``);
+                headers.set("Authorization", `Bearer ${token}`);
             }
 
             return headers;

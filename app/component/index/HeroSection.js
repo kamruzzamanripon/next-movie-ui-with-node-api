@@ -3,7 +3,7 @@ import Plus from "../icons/Plus";
 const HeroSection = () => {
     return (
         <section>
-        <div className="flex flex-col justify-between mt-4 bg-black/10 bg-blend-multiply rounded-3xl h-80 overflow-hidden bg-cover bg-center px-7 pt-4 pb-6 text-white" style={{"background-image":"url('action-movie.png')"}}>
+        <div className="flex flex-col justify-between mt-4 bg-black/10 bg-blend-multiply rounded-3xl h-80 overflow-hidden bg-cover bg-center px-7 pt-4 pb-6 text-white" style={{"backgroundImage":"url('action-movie.png')"}}>
             <div className="bg-gradient-to-r from-black/30 to-transparent -mx-7 -mb-6 px-7 pb-6 pt-44">
             <span className="uppercase text-3xl font-semibold drop-shadow-lg ">Inception</span>
             <div className="text-xs text-gray-200 mt-2">
