@@ -10,6 +10,8 @@ const loading = () => {
             <Image
                 src="/bird-wings-flying-feature.gif" 
                 alt="Bird flying animation" 
+                width={500}
+                height={500}
             />
         </div>
     );

@@ -135,8 +135,8 @@ async function fetchImageUrl(imagePrompt,synopsis,title){
                 alt="Bird flying animation" 
                 className="rounded-full w-48 h-48 absolute top-0 right-0"
                 width={105} 
-            height={105} 
-            layout="responsive"
+                height={105} 
+                
             />
         </div>
         

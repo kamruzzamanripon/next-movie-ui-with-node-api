@@ -74,6 +74,8 @@ const FormInput = () => {
                 src="/storytelling-08.gif"
                 alt="input"
                 className="rounded-full w-48 h-48 absolute -top-5 right-0 sm::hidden"
+                width={200}
+                height={200}
             />
       </div>
       <form onSubmit={handleSubmit}>
