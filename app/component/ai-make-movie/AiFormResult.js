@@ -25,7 +25,7 @@ const AiFormResult = () => {
   };
 
   
-
+  //for category when category change.
   const handleChange = (e) => {
     const { name, value } = e.target;
     setMovieData({ ...movieData, [name]: value });
