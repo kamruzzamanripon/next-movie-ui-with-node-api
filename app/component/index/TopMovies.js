@@ -24,7 +24,7 @@ const TopMovies = () => {
     <section className="mt-9 bg-lime-300 dark:bg-rose-500 p-5 rounded-md">
       <div className="flex items-center justify-between">
         <span className="font-semibold text-gray-700 text-base dark:text-white">
-          Top Movies
+          My Favourite Movies and Collections
         </span>
         <div className="flex items-center space-x-2 fill-gray-500">
           <NextPrev />
