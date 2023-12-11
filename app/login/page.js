@@ -2,8 +2,8 @@
 
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from "react";
-import Error from "../component/common/Error";
 import { useLoginMutation } from "../reduxStore/features/auth/authApi";
+import Error from "../component/common/Error";
 
 const Page = () => {
   const [email, setEmail] = useState("");
